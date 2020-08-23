@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<style>
+.p1  {
+		font-size: 28px
+}
+.text {
+		text-shadow: 2px 2px;
+		text-align: center;
+		font-size: 35px
+}
+.image {
+  padding: 30px;
+  width: 300px;
+}
+
+.image:hover {
+  box-shadow: 0 0 1px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+.img-wrap, h2{
+				text-align: center;
+
+			}
+			.img-wrap a img{
+ 					display:block;
+			}
+			.img-wrap > a{
+ 					display:inline-block;
+ 					vertical-align: middle;
+ 					border: 1px solid white
+			}
+			ection.special, article.special {
+		text-align: center;
+	}
+
+	header p {
+		position: relative;
+		margin: 0 0 1.5rem 0;
+	}
+
+	header h2 + p {
+		font-size: 1.25rem;
+		margin-top: -1rem;
+	}
+
+	header h3 + p {
+		font-size: 1.1rem;
+		margin-top: -0.8rem;
+	}
+
+	header h4 + p,
+	header h5 + p,
+	header h6 + p {
+		font-size: 0.9rem;
+		margin-top: -0.6rem;
+	}
+
+	header p {
+		color: #bbb;
+	}
+</style>
+</head>
+<body>
+<div align="center">
+	<img  src="static/crypto.png" align="center" style="max-width:100%;height:auto;">
+</div>
+<hr>
+<div class="text">
+<h2 align="center">Encrypt & Decrypt Text Online </h2>
+</div>
+<div class="p1">
+<p align="center">Protect your text by Encrypting and Decrypting any given text with a password that no one knows </p>
+</div>
+<br>
+<br>
+<br>
+<div class="img-wrap">
+		<a href="{{ url_for('encryption') }}"><img class="image" src="static/lock.png" height="200" width="100">Encryption</a>
+		<a href="{{ url_for('decryption') }}"><img class="image" src="static/unlock.png" height="200" width="100">Decryption</a>
+ </div>
+<hr>
+<footer class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <img src="static/crypto.png" style="max-width:100%;height:auto;">
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Crypto</p>
+  </div>
+</footer>
+</body>
+</html>
