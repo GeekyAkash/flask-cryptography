@@ -1,7 +1,2 @@
 .vscode
 __pycache__
-pipfile
-pipfile.lock
-procfile
-requirements.txt
-runtime.txt
