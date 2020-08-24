@@ -36,7 +36,7 @@ def home():
     return render_template("home.html")
 
 
-@app.route('/main')
+@app.route('/main', methods=['GET', 'POST'])
 def main():
     return render_template("main.html")
 
@@ -48,7 +48,7 @@ def encryption():
         message = flash("Maximum Number of Words must be 1000")
         return render_template('Encryption.html', title='Encryption', message=message, form=form)
 
-    if request.method == 'POST' and form.validate_on_submit():
+    if  form.validate_on_submit():
         encrypt_message = encrypt(form.message.data, form.password.data)
         return encrypt_message
 
@@ -59,7 +59,7 @@ def encryption():
 @app.route('/decryption', methods=['GET', 'POST'])
 def decryption():
     form = Decryption(request.form)
-    if request.method == 'POST' and form.validate_on_submit():
+    if  form.validate_on_submit():
         decrypt_message = decrypt(form.message.data, form.password.data)
         return decrypt_message
 
